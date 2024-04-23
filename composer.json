@@ -1,0 +1,71 @@
+{
+    "name": "jalallinux/laravel-kavenegar",
+    "description": "Kavenegar laravel client",
+    "keywords": [
+        "HiDevs",
+        "JalalLinuX",
+        "kavenegar",
+        "laravel"
+    ],
+    "homepage": "https://github.com/jalallinux/laravel-kavenegar",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "JalalLinuX",
+            "email": "smjjalalzadeh93@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0|^8.1|^8.2",
+        "ext-fileinfo": "*",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.0",
+        "illuminate/container": "^9.0|^10.0",
+        "illuminate/contracts": "^9.0|^10.0",
+        "illuminate/http": "^9.0|^10.0",
+        "illuminate/support": "^9.0|^10.0",
+        "jenssegers/model": "^1.5",
+        "php-mqtt/client": "^1.8",
+        "spatie/laravel-enum": "^3.0"
+    },
+    "require-dev": {
+        "laravel/pint": "*",
+        "orchestra/testbench": "^7.0|^8.0",
+        "phpunit/phpunit": "^9.4"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "JalalLinuX\\Kavenegar\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JalalLinuX\\Kavenegar\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "format": "php-cs-fixer fix --allow-risky=yes",
+        "analyse": "phpstan analyse",
+        "pint": "vendor/bin/pint --config pint.json"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JalalLinuX\\Kavenegar\\LaravelKavenegarServiceProvider"
+            ]
+        }
+    }
+}
