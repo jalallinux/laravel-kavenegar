@@ -4,8 +4,8 @@ namespace JalalLinuX\Kavenegar;
 
 class Kavenegar
 {
-    public function __construct()
+    public function hello(): string
     {
-        //
+        return 'hi';
     }
 }
