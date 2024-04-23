@@ -44,7 +44,6 @@ class LaravelKavenegarServiceProvider extends ServiceProvider
     public function registerBindings(): void
     {
         /** Register Helper function class */
-
     }
 
     public function registerTranslations(): void
